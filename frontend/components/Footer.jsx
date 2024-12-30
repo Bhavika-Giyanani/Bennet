@@ -1,16 +1,34 @@
 import Link from "next/link";
 import Image from "next/image";
+// import {
+//   MapPin,
+//   Phone,
+//   Mail,
+//   Clock,
+//   Facebook,
+//   Twitter,
+//   Instagram,
+// } from "lucide-react";
 import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Facebook,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+  ClockIcon,
+  PhoneIcon,
+  EmailIcon,
+  MapPinIcon,
+  InstagramIcon,
+  XIcon,
+  FacebookIcon,
+} from "./SvgIcons";
 
 export default function Footer() {
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Our Products", href: "/products" },
+    { name: "Manufacturing", href: "/manufacturing" },
+    { name: "Life At Bennet", href: "/life-at-bennet" },
+    { name: "Careers", href: "/careers" },
+    { name: "Contact Us", href: "/contact" },
+  ];
   return (
     <footer className="bg-white pt-16 pb-8 border-t-4 border-[#aeca1d]">
       <div className="container mx-auto px-4">
@@ -26,7 +44,7 @@ export default function Footer() {
             />
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 mt-1 text-[#9DC41A]" />
+                <MapPinIcon className="w-5 h-5 mt-1 text-[#9DC41A]" />
                 <p className="text-sm">
                   608 B Wing, 6th Floor
                   <br />
@@ -36,15 +54,20 @@ export default function Footer() {
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-[#9DC41A]" />
+                {/* <Phone className="w-5 h-5 text-[#9DC41A]" /> */}
+                <PhoneIcon />
                 <p className="text-sm">0265 236 1750</p>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-[#9DC41A]" />
+                <EmailIcon />
+
                 <p className="text-sm">sale@bennet.com</p>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-[#9DC41A]" />
+                {/* <Clock className="w-5 h-5 text-[#9DC41A]" />
+                 */}
+                <ClockIcon />
+
                 <p className="text-sm">10:00 - 18:00, Mon - Sat</p>
               </div>
             </div>
@@ -54,18 +77,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">Quicklinks</h3>
             <ul className="space-y-3">
-              {[
-                "Home",
-                "About Us",
-                "Manufacturing",
-                "Our Products",
-                "Life At Bennet",
-                "Careers",
-                "Contact Us",
-              ].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-sm hover:text-[#9DC41A]">
-                    {item}
+              {navigation.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm hover:text-[#9DC41A]"
+                  >
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -95,15 +113,15 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6">Connect With Us</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Facebook className="w-5 h-5" />
+                <FacebookIcon />
                 <span className="text-sm">xyz@.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Twitter className="w-5 h-5" />
+                <XIcon />
                 <span className="text-sm">xyz@.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Instagram className="w-5 h-5" />
+                <InstagramIcon />
                 <span className="text-sm">xyz@.com</span>
               </div>
             </div>
