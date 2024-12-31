@@ -5,37 +5,6 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-grow">
-        {/* Hero Section */}
-        {/* <section className="relative bg-white">
-          <div className="container mx-auto px-4 py-12 lg:py-16">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="space-y-6">
-                <h1 className="text-4xl lg:text-7xl font-bold leading-tight">
-                  <span>Empowering</span>
-                  <br />
-                  <span>People, Shaping</span>
-                  <br />
-                  <span className="text-[#9DC41A]">Healthcare's</span>
-                  <br />
-                  <span>Future</span>
-                </h1>
-                <p className="text-gray-600 text-lg">
-                  Empowering Growth, Celebrating Success
-                </p>
-              </div>
-              <div className="relative h-[300px] lg:h-[400px]">
-                <Image
-                  src="/career-img-1.png"
-                  alt="Healthcare Professional"
-                  fill
-                  className="object-cover rounded-lg"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         <HeroSection
           imageLink="/career-img-1.png"
           title='<span>Empowering</span>

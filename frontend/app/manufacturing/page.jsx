@@ -1,42 +1,9 @@
 import Image from "next/image";
-import { MapPin, MoveDown } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 
 export default function Manufacturing() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      {/* <section className="relative bg-white">
-        <div className="container mx-auto px-4 py-12 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-7xl font-bold leading-tight">
-                Empowering lives and{" "}
-                <span className="text-[#9DC41A]">affordability</span>
-              </h1>
-              <p className="text-gray-600 text-lg">
-                Where excellence meets accessibility
-              </p>
-              <button className="bg-black/90 text-white font-bold pl-4 pr-1 py-1  rounded-full flex justify-evenly border border-white items-center gap-2">
-                <p>Know More</p>
-                <div className="rounded-full bg-[#AECA1DE5]/90 text-black px-4 py-4">
-                  <MoveDown />
-                </div>
-              </button>
-            </div>
-            <div className="relative h-[300px] lg:h-[400px]">
-              <Image
-                src="/manufacturing.png"
-                alt="image"
-                fill
-                className="object-contain rounded-lg"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <HeroSection
         imageLink="/manufacturing.png"
         title='Empowering lives and <span className="text-[#9DC41A]">affordability</span>'
@@ -109,7 +76,7 @@ export default function Manufacturing() {
       </section>
 
       {/* Manufacturing Network */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           {/* Title */}
           <div className="flex justify-start md:justify-center md:gap-0 lg:gap-0 items-center my-10 mb-14">
@@ -124,11 +91,14 @@ export default function Manufacturing() {
             Experience the <span className="text-[#b4d335]">BENNET</span>{" "}
             difference in every product.
           </h3>
-          <div className="relative h-[400px] bg-white rounded-lg shadow-sm p-4">
-            <div className="absolute inset-0 p-4">
-              <MapPin className="text-[#b4d335] w-6 h-6" />
-              <span className="ml-2">Baddi, Himachal Pradesh Plant</span>
-            </div>
+          <div className="relative w-full h-[200px] md:h-[400px] bg-gradient-to-br from-[#AECA1D]/10 to-[#2C3D5A]/10 shadow-sm flex justify-center items-center">
+            <Image
+              src="/manufacturing-network.png"
+              alt="manufacturing network"
+              layout="fill"
+              objectFit="contain"
+              className="align-middle"
+            />
           </div>
         </div>
       </section>

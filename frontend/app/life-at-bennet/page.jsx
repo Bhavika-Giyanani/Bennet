@@ -2,7 +2,6 @@ import Events from "@/components/Events";
 import HeroSection from "@/components/HeroSection";
 import ImageGallery from "@/components/ImageGallery";
 import Testimonial from "@/components/Testimonial";
-import Image from "next/image";
 
 export default function LifeAtBennet() {
   const workplaceImages = [
@@ -37,32 +36,6 @@ export default function LifeAtBennet() {
 
   return (
     <div className="min-h-screen flex flex-col mx-auto">
-      {/* Hero Section */}
-      {/* <section className="relative bg-white">
-        <div className="container mx-auto px-4 py-12 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-7xl font-bold leading-tight">
-                Together We <span className="text-[#9DC41A]">Thrive</span>,
-                <br />
-                Together We <span className="text-[#9DC41A]">Succeed</span>
-              </h1>
-              <p className="text-gray-600 text-lg">
-                Empowering Growth, Celebrating Success
-              </p>
-            </div>
-            <div className="relative h-[300px] lg:h-[400px]">
-              <Image
-                src="/life-at-bennet.png"
-                alt="image"
-                fill
-                className="object-cover rounded-lg"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
       <HeroSection
         imageLink="/life-at-bennet.png"
         title='Together We <span className="text-[#9DC41A]">Thrive</span>,
@@ -97,7 +70,9 @@ export default function LifeAtBennet() {
         </div>
         <ImageGallery />
       </section>
-      {/* <Events /> */}
+      <div className="container mx-auto">
+        <Events />
+      </div>
       <Testimonial />
     </div>
   );
